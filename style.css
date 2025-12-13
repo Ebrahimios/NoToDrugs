@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+:root {
+    --primary-blue: #036CB0;
+    --gradient-start: #FF555861;
+    /* Assumed RRGGBBAA or simple hex. Treating as is. */
+    --text-dark: #333;
+    --text-light: #fff;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-logos {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    height: 50px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-blue);
+}
+
+.nav-end {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-text {
+    font-weight: 700;
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+}
+
+.nav-icon {
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    transition: all 0.3s;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    /* Adjust based on valid navbar height if known, approx 80px */
+    min-height: 500px;
+    /* Adjust as needed */
+    overflow: hidden;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.hero-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradient from bottom #FF555861 to top #036CB0 */
+    /* Note: "start from bottom by color X and end at top by Y" means bottom is X, top is Y. */
+    /* linear-gradient(to top, X, Y) */
+    background: linear-gradient(to top, var(--gradient-start), var(--primary-blue));
+    mix-blend-mode: multiply;
+    /* Optional: improves visibility over image */
+    opacity: 0.8;
+    /* Adjust for readability */
+}
+
+/* Override gradient to exact user spec without blend mode if preferred, 
+   but overlay on image needs opacity or RGBA */
+.hero-gradient {
+    background: linear-gradient(to top, #FF555861, #036CB0);
+    mix-blend-mode: normal;
+    opacity: 0.35;
+    /* The alpha in #FF555861 is inherent */
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    /* Above image and gradient */
+    width: 100%;
+    padding: 20px;
+    transform: translateY(-50px);
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.hero-text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 2;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Placeholder Section */
+.placeholder-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.placeholder-section h2 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 1rem;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-end {
+        display: none;
+    }
+
+    .hero-content {
+        transform: none;
+        padding-top: 50px;
+        /* Ensure some spacing */
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+        /* Scale down for mobile */
+    }
+
+    .hero-text {
+        font-size: 18px;
+    }
+}
