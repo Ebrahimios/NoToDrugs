@@ -737,6 +737,25 @@ body {
     z-index: 1;
 }
 
+.btn1 {
+    background-color: #036CB0;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    height: 45px;
+    width: 200px;
+}
+
+.btn2 {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 9px;
+    height: 45px;
+    width: 160px;
+    margin-right: 25px;
+}
+
 /* Step Header (Icon + Title) */
 .step-header {
     display: flex;
@@ -1080,4 +1099,439 @@ body {
     .challenges-box {
         padding: 1.5rem;
     }
+}
+
+/* صفحه المساعده */
+/* Help Hero Section */
+.help-hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #036CB0 0%, #D7D7D7 100%);
+    min-height: 400px;
+}
+
+.help-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.help-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.6;
+}
+
+.help-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.help-hero-content h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: 0.5px;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.help-hero-content p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    max-width: 600px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .help-hero {
+        height: 350px;
+        min-height: 300px;
+    }
+
+    .help-hero-content h1 {
+        font-size: 1.8rem;
+        margin: 0 0 1rem 0;
+        padding-bottom: 0.8rem;
+    }
+
+    .help-hero-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .help-hero {
+        height: 300px;
+        min-height: 250px;
+    }
+
+    .help-hero-content {
+        padding: 1rem;
+    }
+
+    .help-hero-content h1 {
+        font-size: 1.4rem;
+        margin: 0 0 0.8rem 0;
+        padding-bottom: 0.6rem;
+    }
+
+    .help-hero-content p {
+        font-size: 0.9rem;
+    }
+}
+
+.hotline-card {
+    background: #ffffff;
+    border: 2px solid #4aa3df;
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 0 0 transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hotline-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(74, 163, 223, 0.3);
+    border-color: #036CB0;
+}
+
+.hotline-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #eaf4fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hotline-icon img {
+    width: 26px;
+    height: 26px;
+}
+
+.hotline-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.hotline-number {
+    font-size: 32px;
+    font-weight: 800;
+    color: #007cc3;
+    margin: 10px 0 15px;
+}
+
+.hotline-card p {
+    font-size: 14px;
+    color: #6c757d;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.divider-line {
+    display: block;
+    border-bottom: 2px solid #555555;
+    margin: 10px 0;
+}
+
+/* sec3 */
+.support-section {
+    direction: rtl;
+}
+
+.support-section {
+    background: #fff;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+}
+
+.support-image {
+    background: #5fb1be;
+    border-radius: 0px 120px 0px 40px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.support-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Support boxes */
+.support-box {
+    border: 1.5px solid #6aaee6;
+    border-radius: 12px;
+    padding: 20px 15px;
+    text-align: center;
+    height: 100%;
+    background: #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.support-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(106, 174, 230, 0.4);
+    border-color: #036CB0;
+}
+
+.support-box .icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #0d6efd;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-size: 18px;
+}
+
+.support-box p {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+}
+
+/* Bottom bar */
+.info-bar {
+    background: #b8dced;
+    border-radius: 12px;
+    padding: 18px 20px;
+}
+
+.info-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #0d6efd;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+    flex-shrink: 0;
+}
+
+.info-text {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    line-height: 1.7;
+}
+
+.info-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.info-item .icon {
+    font-size: 14px;
+}
+
+.info-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.info-phone {
+    font-weight: 600;
+    color: #000;
+}
+
+/* sec4 */
+
+.quote-section {
+    background: linear-gradient(to bottom, #eef6fb 0%, #ffffff 70%);
+    padding: 80px 0;
+    /* direction: rtl; */
+}
+
+/* Quote Icon */
+.quote-icon {
+    width: 46px;
+    height: 46px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #4aa3df;
+    color: #fff;
+    font-size: 30px;
+    line-height: 46px;
+}
+
+/* Title */
+.quote-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Discover */
+.discover-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+}
+
+.discover-text span {
+    color: #007cc3;
+}
+
+/* Cards */
+.info-card {
+    border-radius: 16px;
+    padding: 30px 25px;
+    text-align: center;
+    width: 416px;
+    height: 279px;
+}
+
+.info-card h5 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 15px 0 10px;
+
+}
+
+.info-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Card colors */
+.light-blue {
+    background: #D0EDEE;
+}
+
+.light-pink {
+    background: #FCE8E8;
+}
+
+.dark-blue {
+    background: #036CA3;
+    color: #fff;
+}
+
+.dark-blue p,
+.dark-blue h5 {
+    color: #fff;
+}
+
+/* Icons */
+.card-icon {
+    width: 42px;
+    height: 42px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.card-icon.shield {
+    background-image: url("assets/Support/security.svg");
+}
+
+.card-icon.heart {
+    background-image: url("assets/Support/heart.svg");
+}
+
+.card-icon.home {
+    background-image: url("assets/Support/home.svg");
+}
+
+/* Button */
+.card-btn {
+    display: inline-block;
+    padding: 6px 18px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #000;
+    text-decoration: none;
+}
+
+.card-btn.white {
+    border-color: #fff;
+    color: #fff;
+}
+
+.card-btn:hover {
+    background: #036CB0;
+    color: #fff;
+    border-color: #036CB0;
+}
+
+.info-card {
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Hover للزر */
+.info-card:hover .card-btn {
+    background: #007cc3;
+    color: #fff;
+    border-color: #007cc3;
+}
+
+/* كارد اللون الداكن */
+.dark-blue:hover {
+    box-shadow: 0 18px 40px rgba(10, 103, 152, 0.45);
+}
+
+.dark-blue:hover .card-btn {
+    background: #fff;
+    color: #0a6798;
 }
