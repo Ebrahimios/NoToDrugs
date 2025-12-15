@@ -1428,8 +1428,10 @@ body {
     border-radius: 16px;
     padding: 30px 25px;
     text-align: center;
-    width: 416px;
+    width: 100%;
+    max-width: 416px;
     height: 279px;
+    margin: 0 auto;
 }
 
 .info-card h5 {

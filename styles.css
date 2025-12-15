@@ -120,7 +120,7 @@ body {
 .hero-img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .hero-gradient {
@@ -835,5 +835,62 @@ body {
 
     .cont1 p.lead {
         font-size: 18px;
+    }
+
+    /* Reasons page responsive fixes */
+    .card-shadow {
+        width: 100%;
+        max-width: 325px;
+        margin-right: 0 !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .how-to-protect-item {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .div2 {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .cont5 {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+    }
+
+    .cont5 .section-title {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .img7 {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 2rem auto 0;
+        display: block;
+    }
+
+    .img9 {
+        margin-right: 0;
+    }
+
+    .img19 {
+        margin-right: 0;
+    }
+
+    .community-cards {
+        justify-content: center !important;
+    }
+
+    .community-cards .col-md-4 {
+        margin-left: 0 !important;
+        display: flex;
+        justify-content: center;
     }
 }
